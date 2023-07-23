@@ -1,0 +1,12 @@
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.Dto\bin\Debug\net6.0\CRUDoperations.Dto.deps.json
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.Dto\bin\Debug\net6.0\CRUDoperations.Dto.dll
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.Dto\bin\Debug\net6.0\CRUDoperations.Dto.pdb
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.Dto\obj\Debug\net6.0\CRUDoperations.Dto.csproj.AssemblyReference.cache
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.Dto\obj\Debug\net6.0\CRUDoperations.Dto.GeneratedMSBuildEditorConfig.editorconfig
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.Dto\obj\Debug\net6.0\CRUDoperations.Dto.AssemblyInfoInputs.cache
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.Dto\obj\Debug\net6.0\CRUDoperations.Dto.AssemblyInfo.cs
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.Dto\obj\Debug\net6.0\CRUDoperations.Dto.csproj.CoreCompileInputs.cache
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.Dto\obj\Debug\net6.0\CRUDoperations.Dto.dll
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.Dto\obj\Debug\net6.0\refint\CRUDoperations.Dto.dll
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.Dto\obj\Debug\net6.0\CRUDoperations.Dto.pdb
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.Dto\obj\Debug\net6.0\ref\CRUDoperations.Dto.dll

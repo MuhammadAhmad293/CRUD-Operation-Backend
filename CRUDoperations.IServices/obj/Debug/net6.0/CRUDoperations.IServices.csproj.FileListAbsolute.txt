@@ -1,0 +1,17 @@
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\bin\Debug\net6.0\CRUDoperations.IServices.deps.json
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\bin\Debug\net6.0\CRUDoperations.IServices.dll
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\bin\Debug\net6.0\CRUDoperations.IServices.pdb
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\bin\Debug\net6.0\Common.dll
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\bin\Debug\net6.0\CRUDoperations.Dto.dll
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\bin\Debug\net6.0\Common.pdb
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\bin\Debug\net6.0\CRUDoperations.Dto.pdb
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\obj\Debug\net6.0\CRUDoperations.IServices.csproj.AssemblyReference.cache
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\obj\Debug\net6.0\CRUDoperations.IServices.GeneratedMSBuildEditorConfig.editorconfig
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\obj\Debug\net6.0\CRUDoperations.IServices.AssemblyInfoInputs.cache
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\obj\Debug\net6.0\CRUDoperations.IServices.AssemblyInfo.cs
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\obj\Debug\net6.0\CRUDoperations.IServices.csproj.CoreCompileInputs.cache
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\obj\Debug\net6.0\CRUDoperations.IServices.csproj.CopyComplete
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\obj\Debug\net6.0\CRUDoperations.IServices.dll
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\obj\Debug\net6.0\refint\CRUDoperations.IServices.dll
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\obj\Debug\net6.0\CRUDoperations.IServices.pdb
+F:\Grokking Algorithms\CRUDoperations\CRUDoperations.IServices\obj\Debug\net6.0\ref\CRUDoperations.IServices.dll

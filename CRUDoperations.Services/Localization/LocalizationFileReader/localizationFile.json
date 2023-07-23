@@ -1,0 +1,30 @@
+﻿[
+  {
+    "Key": "GeneralError",
+    "LocalizedValue": {
+      "en": "An error has occurred please try again",
+      "ar": "حدث خطأ ، يرجى المحاولة مرة أخرى"
+    }
+  },
+  {
+    "Key": "GeneralSuccess",
+    "LocalizedValue": {
+      "en": "Success",
+      "ar": "نجاح"
+    }
+  },
+  {
+    "Key": "InvalidRequest",
+    "LocalizedValue": {
+      "en": "Invalid request",
+      "ar": "طلب غير صالح"
+    }
+  },
+  {
+    "Key": "NoDataFound",
+    "LocalizedValue": {
+      "en": "No data found",
+      "ar": "لاتوجد بيانات"
+    }
+  }
+]

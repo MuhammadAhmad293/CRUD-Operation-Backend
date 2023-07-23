@@ -1,0 +1,16 @@
+﻿[
+  {
+    "Key": "GeneralError",
+    "LocalizedValue": {
+      "en": "An error has occurred please try again",
+      "ar": "حدث خطأ ، يرجى المحاولة مرة أخرى"
+    }
+  },
+  {
+    "Key": "GeneralSuccess",
+    "LocalizedValue": {
+      "en": "Success",
+      "ar": "نجاح"
+    }
+  }
+]

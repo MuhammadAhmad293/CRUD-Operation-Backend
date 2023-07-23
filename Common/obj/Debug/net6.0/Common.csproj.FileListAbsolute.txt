@@ -1,0 +1,12 @@
+F:\Grokking Algorithms\CRUDoperations\Common\bin\Debug\net6.0\Common.deps.json
+F:\Grokking Algorithms\CRUDoperations\Common\bin\Debug\net6.0\Common.dll
+F:\Grokking Algorithms\CRUDoperations\Common\bin\Debug\net6.0\Common.pdb
+F:\Grokking Algorithms\CRUDoperations\Common\obj\Debug\net6.0\Common.csproj.AssemblyReference.cache
+F:\Grokking Algorithms\CRUDoperations\Common\obj\Debug\net6.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+F:\Grokking Algorithms\CRUDoperations\Common\obj\Debug\net6.0\Common.AssemblyInfoInputs.cache
+F:\Grokking Algorithms\CRUDoperations\Common\obj\Debug\net6.0\Common.AssemblyInfo.cs
+F:\Grokking Algorithms\CRUDoperations\Common\obj\Debug\net6.0\Common.csproj.CoreCompileInputs.cache
+F:\Grokking Algorithms\CRUDoperations\Common\obj\Debug\net6.0\Common.dll
+F:\Grokking Algorithms\CRUDoperations\Common\obj\Debug\net6.0\refint\Common.dll
+F:\Grokking Algorithms\CRUDoperations\Common\obj\Debug\net6.0\Common.pdb
+F:\Grokking Algorithms\CRUDoperations\Common\obj\Debug\net6.0\ref\Common.dll
