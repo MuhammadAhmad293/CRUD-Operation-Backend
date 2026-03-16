@@ -1,4 +1,4 @@
-﻿using CRUDoperations.Repositories.Context;
+﻿using Operations.Repositories.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 

@@ -1,6 +1,6 @@
 # Project Overview
 
-The **CRUD Operations Backend** repository is a .NET 6 based Web API built using a Clean Architecture / Layered pattern. It serves as a foundational template or system for handling common backend tasks: standard CRUD operations (specifically demonstrated through user management), global exception handling, data mapping, email notifications, and background job processing using Hangfire. 
+The **Operations Backend** repository is a .NET 6 based Web API built using a Clean Architecture / Layered pattern. It serves as a foundational template or system for handling common backend tasks: standard perations (specifically demonstrated through user management), global exception handling, data mapping, email notifications, and background job processing using Hangfire. 
 
 The primary goal of this repository is to demonstrate how to cleanly separate concerns across multiple projects to ensure testability, scalability, and maintainability.
 
@@ -8,25 +8,25 @@ The primary goal of this repository is to demonstrate how to cleanly separate co
 
 # Repository Structure
 
-The solution (`CRUDoperations.sln`) is divided into several strictly purposed `.csproj` projects:
+The solution (`Operations.sln`) is divided into several strictly purposed `.csproj` projects:
 
-1. **`CRUDoperations` (API Layer):** 
+1. **`Operations` (API Layer):** 
    - The entry point of the application. Contains ASP.NET Core Controllers, middlewares (like `ErrorHandlingMiddleware`), Swagger setup, and application configurations (`appsettings.json`, `Program.cs`).
-2. **`CRUDoperations.Services` (Application Layer):** 
+2. **`Operations.Services` (Application Layer):** 
    - Contains the core business logic. It handles data mapping, object validation, and coordinates with repositories to execute the application's use cases (e.g., `UserService`).
-3. **`CRUDoperations.IServices`:** 
+3. **`Operations.IServices`:** 
    - Abstractions (interfaces) for the Services layer, enabling Dependency Injection and inversion of control for consumers (the API).
-4. **`CRUDoperations.Repositories` (Infrastructure / Data Access Layer):** 
+4. **`Operations.Repositories` (Infrastructure / Data Access Layer):** 
    - EF Core implementations. Contains the `AppDbContext`, EF Core migrations, concrete implementations of Repositories, and the `UnitOfWork`.
-5. **`CRUDoperations.IRepositories`:** 
+5. **`Operations.IRepositories`:** 
    - Abstractions (interfaces) for Repositories and the Unit of Work.
-6. **`CRUDoperations.DataModel` (Domain Layer):** 
+6. **`Operations.DataModel` (Domain Layer):** 
    - The core domain model containing the database entities (e.g., `User`, `Mail`). This layer has zero dependencies on other projects.
-7. **`CRUDoperations.Dto`:** 
+7. **`Operations.Dto`:** 
    - Data Transfer Objects used to ferry data between the API, Services, and clients without exposing domain models.
 8. **`Common`:** 
    - Shared cross-cutting utility helpers (e.g., Password Hashing, HTTP clients, Mail Senders, File manipulation).
-9. **`CRUDoperations.Ioc` & `EFCoreMigrationExcution`:** 
+9. **`Operations.Ioc` & `EFCoreMigrationExcution`:** 
    - Boilerplate or conceptual helpers for Dependency Injection abstractions and Db Migrations wrapper logic. (Core DI resolving logic currently resides in individual `Resolver` classes within their respective projects).
 
 ---
@@ -82,7 +82,7 @@ When a web request arrives, the execution lifecycle follows this path:
 
 # Domain Model
 
-The domain models are found in **`CRUDoperations.DataModel.Entities`**.
+The domain models are found in **`Operations.DataModel.Entities`**.
 The system employs an **Anemic Domain Model**—this means the entities are primarily POCOs (Plain Old CLR Objects) with getters and setters, used purely to hold state and represent database schema tables. The rich behavior and domain rules instead live inside the `Services`.
 
 - **`User` (Entity):** The main application user definition holding Names, Email, and Hashed Passwords.
@@ -119,17 +119,17 @@ The architecture effectively abstracts EF Core via `IRepository` and `IUnitOfWor
 # Dependency Graph
 
 ```text
-CRUDoperations (API / Host)
- ├──> CRUDoperations.Services (App Logic)
- │    ├──> CRUDoperations.IServices
- │    ├──> CRUDoperations.Repositories
- │    ├──> CRUDoperations.DataModel
+Operations (API / Host)
+ ├──> Operations.Services (App Logic)
+ │    ├──> Operations.IServices
+ │    ├──> Operations.Repositories
+ │    ├──> Operations.DataModel
  │    └──> Common
- ├──> CRUDoperations.Repositories (EF Data Layer)
- │    ├──> CRUDoperations.IRepositories
- │    ├──> CRUDoperations.DataModel
+ ├──> Operations.Repositories (EF Data Layer)
+ │    ├──> Operations.IRepositories
+ │    ├──> Operations.DataModel
  │    └──> Common
- ├──> CRUDoperations.Dto
+ ├──> Operations.Dto
  └──> Common
 ```
 
@@ -149,8 +149,8 @@ CRUDoperations (API / Host)
 # Important Files Explained
 
 - **`Program.cs`:** The entry point bootstrap. Wires up settings mappings, calls the application's local resolvers (`CoreServicesResolver`), binds Hangfire, and scaffolds CORS and Swagger configuration.
-- **`UnitOfWork.cs`:** Located in `CRUDoperations.Repositories.UnitOfWork`. It controls all actual concrete data persistence. If logic requires Db saving, it goes through here via `CommitAsync()`.
-- **`UserService.cs`:** Located in `CRUDoperations.Services.UserService`. Representative file demonstrating standard application execution. Shows input validation throwing custom exceptions, Mapster usage, password hashing implementation, saving data through the Unit of Work, and generating side-effect models like sending EMails.
+- **`UnitOfWork.cs`:** Located in `Operations.Repositories.UnitOfWork`. It controls all actual concrete data persistence. If logic requires Db saving, it goes through here via `CommitAsync()`.
+- **`UserService.cs`:** Located in `Operations.Services.UserService`. Representative file demonstrating standard application execution. Shows input validation throwing custom exceptions, Mapster usage, password hashing implementation, saving data through the Unit of Work, and generating side-effect models like sending EMails.
 - **`AppDbContext.cs`:** Maps the application's Object Model to the Database. Configures the specific ModelBuilder parameters, dynamic naming structures, and kicks off initial data seeding processes.
 - **`ErrorHandlingMiddleware.cs`:** Wraps all API responses tracking Exceptions mapping specific exceptions to strict HTTP status codes (404 for object not found, 400 for bad parameters).
 
@@ -160,13 +160,13 @@ CRUDoperations (API / Host)
 
 To quickly introduce a new entity and feature into this solution, follow these steps:
 
-1. **Domain:** Create your POCO model inside `CRUDoperations.DataModel.Entities`. 
+1. **Domain:** Create your POCO model inside `Operations.DataModel.Entities`. 
 2. **Database Schema:** Formulate any complex configuration for the Entity via an `IEntityTypeConfiguration` in the context project. Generate your EF Core migration.
-3. **DTOs:** Define your Request Models and Response Models inside `CRUDoperations.Dto.DTOs`.
-4. **Interfaces:** Create `IMyEntityRepository` in `CRUDoperations.IRepositories` and `IMyEntityService` in `CRUDoperations.IServices`.
-5. **Repositories:** Create your concrete repository in `CRUDoperations.Repositories`. Hook it up to `UnitOfWork` and `IUnitOfWork`.
-6. **Business Service:** Create your concrete service within `CRUDoperations.Services`. Ensure you map validations, map via Mapster, and call `UnitOfWork.CommitAsync()`. Remember to register this Service inside `CoreServicesResolver.cs` if dependency injection fails runtime!
-7. **Controller:** Scaffold a new Web API Controller in `CRUDoperations.Controllers` referencing solely your newly scoped `IMyEntityService` through its constructor.
+3. **DTOs:** Define your Request Models and Response Models inside `Operations.Dto.DTOs`.
+4. **Interfaces:** Create `IMyEntityRepository` in `Operations.IRepositories` and `IMyEntityService` in `Operations.IServices`.
+5. **Repositories:** Create your concrete repository in `Operations.Repositories`. Hook it up to `UnitOfWork` and `IUnitOfWork`.
+6. **Business Service:** Create your concrete service within `Operations.Services`. Ensure you map validations, map via Mapster, and call `UnitOfWork.CommitAsync()`. Remember to register this Service inside `CoreServicesResolver.cs` if dependency injection fails runtime!
+7. **Controller:** Scaffold a new Web API Controller in `Operations.Controllers` referencing solely your newly scoped `IMyEntityService` through its constructor.
 
 ---
 
