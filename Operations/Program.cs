@@ -45,7 +45,7 @@ builder.Services.AddTransient(s =>
 
 builder.Services.AddControllers();
 // add hangfire
-builder.Services.AddHangfire(x => x.UseSqlServerStorage(builder.Configuration.GetConnectionString("DBConString")));
+builder.Services.AddHangfire(x => x.UseSqlServerStorage(builder.Configuration.GetConnectionString("HFDBConString")));
 builder.Services.AddHangfireServer();
 //
 
